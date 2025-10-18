@@ -1,0 +1,58 @@
+    1  cd c:/
+    2  git config --list
+    3  git config --global user.name "RobertoCrz"
+    4  git config --global user.email robertocarlosnunezcruz9@gmail.com
+    5  git config --list
+    6  clear
+    7  ssh-keygen -t ed25519 -C "robertocarlosnunezcruz9@gmail.com"
+    8  eval 'ssh-agent -s'
+    9  ssh-add ~/.ssh/id_ed25519
+   10  eval 'ssh-agent -s'
+   11  ssh-add ~/.ssh/id_ed25519
+   12  eval "ssh-agent -s"
+   13  ssh-add ~/.ssh/id_ed25519
+   14  eval "ssh-agent -s"
+   15  eval "$(ssh-agent -k)"
+   16  eval "$(ssh-agent -s)"
+   17  ssh-add ~/.ssh/id_ed25519
+   18  git clone git@github.com:alexander1939/onlycation-apis.git
+   19  clear
+   20  git clone git@github.com:alexander1939/OnlyCation_Frontend.git
+   21  clear
+   22  git clone https://github.com/vBilly/Practica-PullRequest.git
+   23  clear
+   24  history -a
+   25  git clone https://github.com/vBilly/Act-pullRequest.git
+   26  git clone https://github.com/vBilly/Pull-Request.git
+   27  echo "# Proyecto de Práctica - Gestión de Ramas" > README.md
+   28  git add README.md 
+   29  git commit -m "Commit inicial: estructura base del proyecto"
+   30  git push origin main 
+   31  git checkout -b desarrollo 
+   32  echo "function saludar() { return 'Hola Mundo'; }" > funciones.js
+   33  git add . 
+   34  git commit -m "feat: añadir función de saludo básica" 
+   35  git checkout -b feature/validacion
+   36  echo "function validarEmail(email) { return email.includes('@'); }" >> funciones.js
+   37  git add . 
+   38  git commit -m "feat: añadir validación de email"
+   39  git checkout desarrollo
+   40  git checkout -b respaldo-161025-RC 
+   41  git push -u origin respaldo-161025-RC 
+   42  echo "## Respaldo $(date +%d/%m/%Y)" >> README.md 
+   43  echo "- Rama: respaldo-161025-RC" >> README.md 
+   44  echo "- Contiene: desarrollo hasta función de validación" >> README.md 
+   45  git checkout desarrollo 
+   46  git merge feature/validacion
+   47  git checkout main 
+   48  echo "function saludar() { return 'Hola Mundo'; }" > funciones.js 
+   49  git add .
+   50  git commit -m "Saludo básico en la ram main"
+   51  git push origin main 
+   52  git checkout desarrollo 
+   53  git merge main
+   54  git add .
+   55  git commit -m "fix: resolver conflicto en fusión"
+   56  git branch -d feature/validacion 
+   57  git push origin desarrollo 
+   58  history > historial-comandos.txt
